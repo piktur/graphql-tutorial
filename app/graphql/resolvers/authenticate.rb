@@ -13,14 +13,16 @@ module Resolvers
       field :user, Types::UserType
     end
 
-    def call(_opts, args, _ctx)
+    def call(_opts, args, ctx)
       input = args[:email]
 
       return if input.nil?
 
       return unless (user = User.find_by(email: input[:email]))
 
-      AuthToken.new(generate_token(user), user) if user.authenticate(input[:password])
+      ctx[:session][:token] = generate_token(user)
+
+      AuthToken.new(ctx[:session][:token], user) if user.authenticate(input[:password])
     end
 
     private
