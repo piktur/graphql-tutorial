@@ -1,3 +1,7 @@
-class ApplicationRecord < ActiveRecord::Base
+# frozen_string_literal: true
+
+class ApplicationRecord < ActiveRecord::Base # rubocop:disable Documentation
+
   self.abstract_class = true
+
 end
