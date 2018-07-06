@@ -21,10 +21,20 @@ module Resolvers
     type !types[Types::LinkType]
 
     option :filter, type: LinkFilter, with: :apply_filter
+    option :first, type: types.Int, with: :apply_first
+    option :skip, type: types.Int, with: :apply_skip
 
     def apply_filter(scope, input)
       branches = normalize_filters(input).reduce { |a, e| a.or(e) }
       scope.merge(branches)
+    end
+
+    def apply_first(scope, value)
+      scope.limit(value)
+    end
+
+    def apply_skip(scope, value)
+      scope.offset(value)
     end
 
     def normalize_filters(input, branches = [])
