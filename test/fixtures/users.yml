@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  email: MyString
-  password_digest: MyString
+  name: Oblong Icicle
+  email: geo@metr.ical
+  password_digest: $2a$10$3MWrc1NGb4SI.MXQlVpaSesTbFdznf7zEnBF1zi2Pl61hhxfdAZiW
 
 two:
-  name: MyString
-  email: MyString
-  password_digest: MyString
+  name: Agent Orange
+  email: death@beyond.net
+  password_digest: $2a$10$3MWrc1NGb4SI.MXQlVpaSesTbFdznf7zEnBF1zi2Pl61hhxfdAZiW
