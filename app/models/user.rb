@@ -4,7 +4,7 @@ class User < ApplicationRecord # rubocop:disable Documentation
 
   has_secure_password
 
-  validate :name, presence: true
-  validate :email, presence: true, uniqueness: true
+  validates :name, presence: true
+  validates :email, presence: true, uniqueness: true
 
 end
