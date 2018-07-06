@@ -42,4 +42,3 @@ module Resolvers
   end
 
 end
-git commit  -m "✅ test: search links"
