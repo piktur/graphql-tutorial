@@ -6,4 +6,6 @@ class Link < ApplicationRecord
 
   has_many :votes
 
+  validates :description, presence: true, length: { minimum: 5 }
+
 end
