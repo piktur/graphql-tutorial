@@ -7,4 +7,6 @@ class User < ApplicationRecord # rubocop:disable Documentation
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
 
+  has_many :votes
+
 end
